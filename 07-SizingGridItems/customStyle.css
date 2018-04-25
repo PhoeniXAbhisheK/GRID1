@@ -1,0 +1,49 @@
+.container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.item3 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.item8 {
+    grid-column: span 5;
+}
+
+.item9,
+.item10 {
+    grid-column: span 2;
+}
+.item11{
+	grid-column: span 5;
+}
+.item12,
+.item13 {
+    grid-row: span 2;
+}
+
+.item14 {
+    grid-column: span 3;
+}
+
+.item18 {
+    grid-row: span 3;
+}
+
+.item20 {
+    grid-column: span 3;
+    grid-row: span 3;
+}
+
+.item23,
+.item24 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.item30 {
+    grid-column: span 2;
+}
