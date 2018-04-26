@@ -1,0 +1,31 @@
+.container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 200px 200px 1fr;
+    grid-template-areas: 
+    	"sidebar1 	content 	sidebar2"
+    	"sidebar1 	content 	sidebar2"
+    	"footer 	footer 		footer"
+}
+.footer{
+	grid-area: footer;
+}
+.item1{
+	grid-area: sidebar1;
+}
+.item2{
+	grid-area: content;
+}
+.item3{
+	grid-area: sidebar2;
+}
+
+@media screen and (max-width : 640px) {
+	.container{
+		grid-template-areas: 
+    	"content 	content 	content"
+    	"sidebar1 	sidebar1 	sidebar2"
+    	"footer 	footer 		footer" 
+	}
+}
