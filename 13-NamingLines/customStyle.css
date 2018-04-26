@@ -1,0 +1,10 @@
+.container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: [left-side]1fr[content-start] 3fr [content-end]1fr[right-side];
+    grid-template-rows: [content-top] repeat(3, auto) [content-bottom];
+}
+.item3{
+    grid-column: content-start / content-end;
+    grid-row: content-top / content-bottom;
+}
