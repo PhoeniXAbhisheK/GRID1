@@ -1,0 +1,17 @@
+.container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(10, 50px);
+    grid-template-rows: repeat(5, 100px);
+    /*justify-items: center;
+    align-items: center;*/
+    /*justify-content: space-between;
+    align-content: end;*/
+    justify-content: space-between;
+    align-content: end;
+
+}
+
+.itm {
+    background: #fff;
+}
