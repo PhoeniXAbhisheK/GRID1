@@ -1,0 +1,46 @@
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-container>* {
+    flex: 1;
+    margin: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.corners {
+    display: grid;
+    height: 200px;
+    width: 200px;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    border: 10px solid var(--yellow);
+    align-content: center;
+    align-items: end;
+    justify-content: center;
+    justify-items: end;
+}
+
+.corner:nth-child(1),
+.corner:nth-child(2) {
+    align-self: start;
+}
+
+.corner:nth-child(1),
+.corner:nth-child(3) {
+    justify-self: start;
+}
+
+.stacked {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.stacked>* {
+    width: 30%;
+    margin-bottom: 20px;
+}
