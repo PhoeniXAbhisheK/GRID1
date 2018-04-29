@@ -3,7 +3,6 @@
     grid-gap: 10px;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(5, 100px);
-    grid-auto-flow: 
 }
 
 .item {
