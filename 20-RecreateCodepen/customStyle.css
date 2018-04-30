@@ -46,6 +46,9 @@ h6 {
     color: #fff;
     border-bottom: 5px solid #343436;
 }
+.pen-details > *{
+  outline: none;
+}
 
 .code {
     display: grid;
