@@ -1,0 +1,206 @@
+:root {
+    --yellow: #ffc600;
+}
+
+body {
+    font-size: 15px;
+}
+
+button {
+    background: #ffc600;
+    border: 0;
+    padding: 10px 20px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+}
+
+.top {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas: "hero hero cta1" "hero hero cta2"
+}
+
+.hero {
+    grid-area: hero;
+    min-height: 400px;
+    background: url(images/taco.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: bottom right;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.hero>* {
+    background: var(--yellow);
+    padding: 5px;
+}
+
+.cta {
+    background: var(--yellow);
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+
+.cta p {
+    margin: 0;
+}
+
+.cta1 {
+    grid-area: cta1;
+}
+
+.cta2 {
+    grid-area: cta2;
+}
+
+.price {
+    font-size: 60px;
+    font-weight: 300;
+}
+
+.menu ul {
+    display: grid;
+    grid-gap: 10px;
+    padding: 0;
+    /*margin: 0;*/
+    list-style: none;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+.menu a {
+    background: var(--yellow);
+    display: block;
+    padding: 10px;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+[aria-controls="menu-list"] {
+    display: none;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+}
+
+.feature {
+    text-align: center;
+    background: rgba(255, 255, 255, 1);
+    padding: 10px;
+    /*border-radius: 5px;*/
+    font-weight: 500;
+}
+
+.feature .icon {
+    font-size: 50px;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 400px auto;
+    background: #fff;
+    padding: 20px;
+    align-items: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+}
+
+.gallery h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    text-transform: uppercase;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+
+.gallery h2:before,
+.gallery h2:after {
+    display: block;
+    content: '';
+    height: 10px;
+    background: linear-gradient(to var(--direction, left), var(--yellow), transparent);
+}
+
+.gallery h2:after {
+    --direction: right;
+}
+
+.gallery img {
+    width: 100%;
+}
+
+@media (max-width: 1000px) {
+    .menu {
+        order: -1;
+    }
+    [aria-controls="menu-list"] {
+        display: block;
+        cursor: pointer;
+        outline: none;
+    }
+    .menu ul {
+        max-height: 0;
+        -webkit-transform: rotateX(90deg);
+        -moz-transform: rotateX(90deg);
+        -ms-transform: rotateX(90deg);
+        -o-transform: rotateX(90deg);
+        transform: rotateX(90deg);
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -ms-transition: all .5s;
+        -o-transition: all .5s;
+        transition: all .5s;
+    }
+    [aria-expanded="true"] ~ ul {
+        display: grid;
+        max-height: 500px;
+        -webkit-transform: rotateX(0);
+        -moz-transform: rotateX(0);
+        -ms-transform: rotateX(0);
+        -o-transform: rotateX(0);
+        transform: rotateX(0);
+    }
+    [aria-expanded="true"] .open{
+		display: none;
+    }
+    [aria-expanded="false"] .close{
+		display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .top {
+        grid-template-areas: "hero hero" "cta1 cta2"
+    }
+    .about{
+    	grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .top {
+        grid-template-areas: "hero" "cta1" "cta2"
+    }
+}
