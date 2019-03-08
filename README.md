@@ -1,3 +1,3 @@
 # GRID1  
-CssGrid course by [Wesbos](http://github.com/wesbos/) 
+Css-Grid course by [Wesbos](http://github.com/wesbos/) 
 Website : https://cssgrid.io/  
